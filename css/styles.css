@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Questrial&display=swap");
+html { scroll-behavior: smooth; }
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
+
+body { line-height: 1; }
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before, blockquote:after, q:before, q:after { content: ''; content: none; }
+
+table { border-collapse: collapse; border-spacing: 0; }
+
+p, h1 { font-family: "Montserrat", sans-serif; }
+
+h2, h3, h4, h5, h6, span, a { font-family: "Questrial", sans-serif; letter-spacing: 2px; }
+
+.heading-primary { font-size: 1.8rem; letter-spacing: 6px; }
+
+.text-primary { color: #ffffff; }
+
+.text-bold { font-weight: 900; }
+
+.text-center { text-align: center; }
+
+.button-primary { text-decoration: none; background-color: #ffffff; color: #fc758c; padding: 10px 30px; font-weight: 800; }
+.button-primary:hover { border-color: #ffffff; }
+
+.bottom-section { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.padding-small { padding: 20px 0; }
+
+.primary-background { background-color: #fc758c; }
+
+.margin-bottom { margin-bottom: 1.5rem; }
+
+.margin-bottom { margin-bottom: 1.5rem; }
+
+.main-section { height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+.container { width: 100%; max-width: 1200px; margin: 0 auto; }
+
+.small-container { width: 100px; margin: 0 auto; }
+
+.grid-section { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+
+nav ul { margin: 0; padding: 0; list-style: none; }
+nav li { display: inline-block; vertical-align: middle; }
+nav a { font-family: "Questrial", sans-serif !important; display: block; padding: 6px 20px; text-decoration: none; color: #7a7a7a; }
+nav a.navbar-active { background-color: #ff5672; color: #fff4f6 !important; }
+
+.masonry { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; font-family: sans-serif; }
+
+.masonry-container { -webkit-columns: 5 200px; columns: 5 200px; -webkit-column-gap: 1.5rem; column-gap: 1.5rem; width: 95%; margin: 0 auto; }
+.masonry-container div { width: 150px; margin: 0 1.5rem 1.5rem 0; display: inline-block; width: 100%; -webkit-transition: all .25s ease-in-out; transition: all .25s ease-in-out; background-color: #f6f6f6; padding: 5px; }
+.masonry-container div img { width: 100%; -webkit-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
+
+/*# sourceMappingURL=styles.css.map */

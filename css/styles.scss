@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Questrial&display=swap');
+html {
+    scroll-behavior: smooth;
+} 
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+ 
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    box-sizing: border-box;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+//Main colors
+$primary-color: #fc758c;
+$muted-color  : #ffffff;
+
+//Navbar colors
+$nav-inactive-color  : #7a7a7a;
+$nav-active-color    : #fff4f6;
+$nav-active-bgcolor  : #ff5672;
+
+
+//Font Families
+$Montserrat: 'Montserrat', sans-serif;
+$Questrial : 'Questrial',  sans-serif;
+
+// Text basics
+p,h1{
+  font-family: $Montserrat;
+}
+h2,h3,h4,h5,h6,span,a{
+  font-family: $Questrial;
+  letter-spacing: 2px;
+}
+.heading-primary{
+  font-size: 1.8rem;
+  letter-spacing: 6px;
+}
+.text-primary{
+  color: $muted-color;
+}
+.text-bold{
+  font-weight: 900;
+}
+.text-center{
+  text-align: center;
+}
+//Button
+.button-primary{
+  text-decoration: none;
+  background-color: $muted-color;
+  color: $primary-color;
+  padding: 10px 30px;
+  font-weight: 800;
+  &:hover{
+    border-color: $muted-color;
+  }
+}
+.bottom-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.padding-small{
+  padding: 20px 0;
+}
+.primary-background{
+    background-color: $primary-color;
+}
+.margin-bottom{
+  margin-bottom: 1.5rem;
+}
+.margin-bottom{
+  margin-bottom: 1.5rem;
+}
+.main-section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.small-container{
+  width: 100px;
+  margin: 0 auto;
+} 
+.grid-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+nav { 
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+    }
+  
+    li { 
+      display: inline-block;
+      vertical-align: middle;
+    }
+  
+    a {
+      font-family: $Questrial !important;
+      display: block;
+      padding: 6px 20px;
+      text-decoration: none;
+      color: $nav-inactive-color;
+      &.navbar-active{
+        background-color: $nav-active-bgcolor;
+        color: $nav-active-color !important;
+      }
+    }
+  }
+
+
+  // Masonry
+
+  .masonry {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+  } 
+  .masonry-container {
+    columns: 5 200px;
+    column-gap: 1.5rem;
+    width: 95%;
+    margin: 0 auto;
+    div {
+      width: 150px;
+      margin: 0 1.5rem 1.5rem 0;
+      display: inline-block;
+      width: 100%;
+      transition: all .25s ease-in-out;
+      background-color:#f6f6f6;
+      padding: 5px;
+      img {
+        width: 100%;
+        transition: all .25s ease-in-out;
+      }
+    }
+  }
