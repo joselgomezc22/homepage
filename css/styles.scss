@@ -52,6 +52,7 @@ table {
 //Main colors
 $primary-color: #fc758c;
 $muted-color  : #ffffff;
+$secondary-color: #c3d0d8;
 
 //Navbar colors
 $nav-inactive-color  : #7a7a7a;
@@ -66,6 +67,7 @@ $Questrial : 'Questrial',  sans-serif;
 // Text basics
 p,h1{
   font-family: $Montserrat;
+  letter-spacing: 2px;
 }
 h2,h3,h4,h5,h6,span,a{
   font-family: $Questrial;
@@ -75,8 +77,16 @@ h2,h3,h4,h5,h6,span,a{
   font-size: 1.8rem;
   letter-spacing: 6px;
 }
-.text-primary{
+.text-muted{
   color: $muted-color;
+}
+.text-secondary{
+  color: $secondary-color;
+  font-weight: 700;
+}
+.text-primary{
+  color: $primary-color !important;
+  font-weight: 700;
 }
 .text-bold{
   font-weight: 900;
@@ -84,7 +94,8 @@ h2,h3,h4,h5,h6,span,a{
 .text-center{
   text-align: center;
 }
-//Button
+
+//Buttons
 .button-primary{
   text-decoration: none;
   background-color: $muted-color;
@@ -95,15 +106,42 @@ h2,h3,h4,h5,h6,span,a{
     border-color: $muted-color;
   }
 }
-.bottom-section{
+.button-secondary{
+  text-decoration: none;
+  background-color: $primary-color;
+  color: $muted-color;
+  padding: 10px 30px;
+  font-weight: 800;
+  &:hover{
+    border-color: $primary-color;
+  }
+}
+
+//Sections
+.main-section{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio-section{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
+footer{
+  display: flex;
+  flex-direction: column ;
+  justify-content: center;
+  align-items: center;
+}
+//
 .padding-small{
   padding: 20px 0;
+}
+.padding-bottom-large{
+  padding-bottom: 40px;
 }
 .primary-background{
     background-color: $primary-color;
@@ -111,45 +149,39 @@ h2,h3,h4,h5,h6,span,a{
 .margin-bottom{
   margin-bottom: 1.5rem;
 }
-.margin-bottom{
-  margin-bottom: 1.5rem;
-}
-.main-section{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .container{
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
 }
 .small-container{
-  width: 100px;
+  max-width: 100px;
   margin: 0 auto;
-} 
+}
 .grid-section{
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+//Social media icons
+.social-icons{
+  a{ 
+    margin: 10px ;
+  }
+}
 
 
-
-nav { 
+// Navbar 
+nav.desktop-menu { 
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
-      
     }
-  
     li { 
       display: inline-block;
       vertical-align: middle;
     }
-  
     a {
       font-family: $Questrial !important;
       display: block;
@@ -164,24 +196,14 @@ nav {
   }
 
 
-  // Masonry
-
-  .masonry {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: sans-serif;
-  } 
+  // Masonry Gallery
   .masonry-container {
-    columns: 5 200px;
+    columns: 5 220px;
     column-gap: 1.5rem;
-    width: 95%;
+    max-width: 900px;
     margin: 0 auto;
     div {
-      width: 150px;
-      margin: 0 1.5rem 1.5rem 0;
-      display: inline-block;
+      margin: 0 0.5rem 0.5rem 0;
       width: 100%;
       transition: all .25s ease-in-out;
       background-color:#f6f6f6;
@@ -192,3 +214,6 @@ nav {
       }
     }
   }
+
+  //Mobile styles
+  
