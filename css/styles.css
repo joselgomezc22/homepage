@@ -16,11 +16,19 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
+@media (min-width: 280px) and (max-width: 767px) { .mobile-hidden { display: none; } }
+
+@media (min-width: 1024px) { .desktop-hidden { display: none; } }
+
+.hidden { display: none; }
+
 p, h1 { font-family: "Montserrat", sans-serif; letter-spacing: 2px; }
 
 h2, h3, h4, h5, h6, span, a { font-family: "Questrial", sans-serif; letter-spacing: 2px; }
 
-.heading-primary { font-size: 1.8rem; letter-spacing: 6px; }
+.heading-primary { letter-spacing: 6px; }
+@media (min-width: 1024px) { .heading-primary { font-size: 1.8rem; } }
+@media (min-width: 280px) and (max-width: 767px) { .heading-primary { font-size: 1.5rem; } }
 
 .text-muted { color: #ffffff; }
 
@@ -39,6 +47,7 @@ h2, h3, h4, h5, h6, span, a { font-family: "Questrial", sans-serif; letter-spaci
 .button-secondary:hover { border-color: #fc758c; }
 
 .main-section { height: 100vh; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
+@media (min-width: 280px) and (max-width: 767px) { .main-section { margin: 5px; } }
 
 .portfolio-section { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
@@ -52,21 +61,48 @@ footer { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-
 
 .margin-bottom { margin-bottom: 1.5rem; }
 
-.container { width: 100%; max-width: 1200px; margin: 0 auto; }
+.container { width: 100%; margin: 0 auto; }
+@media (min-width: 1024px) { .container { max-width: 1200px; } }
+@media (min-width: 768px) and (max-width: 1023px) { .container { max-width: 800px; } }
+@media (min-width: 280px) and (max-width: 767px) { .container { max-width: 300px; } }
 
-.small-container { max-width: 100px; margin: 0 auto; }
+.small-container { margin: 0 auto; }
+@media (min-width: 768px) and (max-width: 1023px) { .small-container { width: 10%; } }
+@media (min-width: 1024px) { .small-container { width: 10%; } }
+@media (min-width: 280px) and (max-width: 767px) { .small-container { width: 20%; } }
 
 .grid-section { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
 
 .social-icons a { margin: 10px; }
 
-nav.desktop-menu ul { margin: 0; padding: 0; list-style: none; }
+.search-input { width: 90%; border: none; padding: 15px 10px; -webkit-transition: all .5s ease; transition: all .5s ease; }
+
+@media (min-width: 768px) and (max-width: 1023px) { nav.desktop-menu ul { margin: 0; padding: 0; list-style: none; } }
+@media (min-width: 1024px) { nav.desktop-menu ul { margin: 0; padding: 0; list-style: none; } }
+@media (min-width: 280px) and (max-width: 767px) { nav.desktop-menu ul { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
 nav.desktop-menu li { display: inline-block; vertical-align: middle; }
 nav.desktop-menu a { font-family: "Questrial", sans-serif !important; display: block; padding: 6px 20px; text-decoration: none; color: #7a7a7a; }
+nav.desktop-menu a.nav-button:hover { background-color: #ff5672; color: #fff4f6 !important; opacity: 50%; }
 nav.desktop-menu a.navbar-active { background-color: #ff5672; color: #fff4f6 !important; }
 
-.masonry-container { -webkit-columns: 5 220px; columns: 5 220px; -webkit-column-gap: 1.5rem; column-gap: 1.5rem; max-width: 900px; margin: 0 auto; }
-.masonry-container div { margin: 0 0.5rem 0.5rem 0; width: 100%; -webkit-transition: all .25s ease-in-out; transition: all .25s ease-in-out; background-color: #f6f6f6; padding: 5px; }
-.masonry-container div img { width: 100%; -webkit-transition: all .25s ease-in-out; transition: all .25s ease-in-out; }
+.list-container { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; max-width: 900px; margin: auto; }
+.list-container div { margin-bottom: 15px; }
+.list-container div img { width: 100%; -o-object-fit: cover; object-fit: cover; }
+
+@media (min-width: 768px) and (max-width: 1023px) { .masonry-container { -webkit-columns: 5 220px; columns: 5 220px; -webkit-column-gap: 1.5rem; column-gap: 1.5rem; max-width: 900px; margin: 0 auto; } }
+@media (min-width: 1024px) { .masonry-container { -webkit-columns: 5 150px; columns: 5 150px; -webkit-column-gap: 1.5rem; column-gap: 1.5rem; max-width: 900px; margin: 0 auto; } }
+@media (min-width: 280px) and (max-width: 767px) { .masonry-container { -webkit-columns: 5 120px; columns: 5 120px; } }
+.masonry-container div { margin: 0 0.5rem 0.5rem 0; width: 100%; -webkit-transition: all 1s ease; transition: all 1s ease; padding: 5px; }
+.masonry-container div img { width: 100%; -webkit-transition: all 1s ease; transition: all 1s ease; }
+.masonry-container div img.new-image { -webkit-transition: all 1s ease; transition: all 1s ease; }
+
+.menu-ico div { width: 35px; height: 5px; background-color: #c3d0d8; margin: 6px 0; }
+
+.toggle-container { -webkit-transition: height 0.35s ease-in-out; transition: height 0.35s ease-in-out; position: absolute; background: #ffffff; width: 90%; left: 5%; overflow: hidden; z-index: 9999; border-radius: 0 0 5px 5px; padding-top: 15px; }
+.toggle-container:not(.active) { display: none; }
+.toggle-container ul li { width: 100%; border-bottom: 1px solid #c3d0d8; }
+.toggle-container ul li a { padding: 8px 10px; display: block; text-decoration: none; color: #7a7a7a; }
+.toggle-container ul li label img { width: 10%; }
+.toggle-container ul li .search-mobile { width: 90%; border: none; padding: 15px 10px; }
 
 /*# sourceMappingURL=styles.css.map */
