@@ -160,12 +160,17 @@ h2,h3,h4,h5,h6,span,a{
 
 //Sections
 .main-section{
-  height: 100vh;
+  
   display: flex;
   justify-content: center;
   align-items: center;
 
+  @include desktop(){
+    margin: 5px;
+    height: 80vh;
+  }
   @include phone{
+    height: 70vh;
     margin: 5px;
   }
 }
@@ -238,6 +243,7 @@ footer{
     border: none;
     padding: 15px 10px;
     transition: all .5s ease;
+    font-family: $Questrial;
     
 }
 nav.desktop-menu { 
@@ -276,7 +282,7 @@ nav.desktop-menu {
         color: $nav-active-color !important;
         opacity: 50%;
       }
-      &.navbar-active{
+      &.navbar-active , &.navbar-active-two{
         background-color: $nav-active-bgcolor;
         color: $nav-active-color !important;
       }
@@ -290,10 +296,11 @@ nav.desktop-menu {
     margin: auto;
     & div {
       margin-bottom: 15px;
-
+      transition: all 1s ease;
       & img {
         width: 100%;
         object-fit: cover;
+        transition: all 1s ease;
       }
     }
   }
@@ -325,9 +332,6 @@ nav.desktop-menu {
       img {
         width: 100%;
         transition: all 1s ease;
-        &.new-image{
-          transition: all 1s ease;
-        }
       }
     }
   }
@@ -339,6 +343,8 @@ nav.desktop-menu {
       height: 5px;
       background-color: $secondary-color;
       margin: 6px 0;
+     
+      
     }
   } 
 
@@ -372,6 +378,8 @@ nav.desktop-menu {
           width: 90%;
           border: none;
           padding: 15px 10px;
+          font-family: $Questrial;
+          margin-left: 5px;
         }
       }
     }

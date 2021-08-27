@@ -24,13 +24,21 @@ const images = [
 ];
 //Desktop menu interaction
 let navitems = document.getElementsByClassName("nav-button");
-for (let i = 0; i < navitems.length; i++) {
-  navitems[i].addEventListener("click", function() {
-  let current = document.getElementsByClassName("navbar-active");
-  current[0].className = current[0].className.replace(" navbar-active", "");
-  this.className += " navbar-active";
-  });
-}
+let navitemstwho = document.getElementsByClassName("nav-button-twho");
+const navbaractive = (items,activeclass)=>{
+    for (let i = 0; i < items.length; i++) {
+        items[i].addEventListener("click", function() {
+        let current = document.getElementsByClassName(activeclass);
+        current[0].className = current[0].className.replace(' '+activeclass, "");
+        this.className += ' '+activeclass;
+        });
+      }
+};
+
+navbaractive(navitems,'navbar-active');
+navbaractive(navitemstwho,'navbar-active-two');
+
+
 let search_button = document.getElementsByClassName("search-button");
 
 search_button[0].addEventListener("click", function() {
